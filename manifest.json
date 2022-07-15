@@ -1,0 +1,10 @@
+{
+  "name": "BM base file structure",
+  "id": "1125011709011932207",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}
