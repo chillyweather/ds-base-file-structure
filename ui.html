@@ -20,7 +20,7 @@
 <h2 class="header">Choose document type:</h2>
 
 <div>
-  <div class="radio">
+  <!-- <div class="radio">
     <input
       id="radioButton1"
       type="radio"
@@ -50,16 +50,31 @@
       name="radioGroup"
     />
     <label for="radioButton3" class="radio__label">Product</label>
-  </div>
-  <button class="button button--primary" id="submit">Build</button>
+  </div> -->
+  <button class="button button--primary" id="ds">Build DS Pages</button>
+  <button class="button button--primary" id="marketing">Build Marketing Pages</button>
+  <button class="button button--primary" id="product">Build Product Pages</button>
+  <button class="button button--primary" id="internal-tools">Add Internal Tools Page</button>
 </div>
 
 <script>
-  document.getElementById("submit").onclick = () => {
-    const documentType = document.querySelector(
-      'input[name="radioGroup"]:checked'
-    ).value;
-
-    parent.postMessage({ pluginMessage: { documentType } }, "*");
+//   document.getElementById("submit").onclick = () => {
+//     const documentType = document.querySelector(
+//       'input[name="radioGroup"]:checked'
+//     ).value;
+// 
+//     parent.postMessage({ pluginMessage: { documentType } }, "*");
+//   };
+document.getElementById("ds").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "ds" } }, "*");
+  };
+document.getElementById("marketing").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "marketing" } }, "*");
+  };
+document.getElementById("product").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "product" } }, "*");
+  };
+document.getElementById("internal-tools").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "internal-tools" } }, "*");
   };
 </script>
